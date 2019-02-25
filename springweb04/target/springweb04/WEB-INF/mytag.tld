@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib >
+
+    <tlib-version>1.1</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>mytag</short-name>
+    <uri>http://java.sun.com/jsp/mytag/my</uri>
+
+    <tag>
+        <name>abc</name>  <!--标签名称-->
+        <tag-class>com.util.MyTag</tag-class><!--引入类-->
+        <!--<body-content>empty</body-content>--><!--内容体为空-->
+        <body-content>scriptless</body-content><!--内容体有值-->
+        <attribute><!--添加属性-->
+            <name>test</name>
+            <required>true</required>
+            <type>java.lang.Boolean</type>
+            <rtexprvalue>true</rtexprvalue><!--是否支持el表达式-->
+        </attribute>
+        <attribute>
+            <name>yonghu</name>
+            <required>true</required>
+            <type>com.bean.UserTb</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+</taglib>
